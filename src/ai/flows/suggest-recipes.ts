@@ -24,7 +24,7 @@ const RecipeSchema = z.object({
     description: z.string().describe('A brief, enticing description of the recipe.'),
     ingredients: z.array(z.string()).describe('A list of ingredients required for the recipe, including quantities.'),
     instructions: z.array(z.string()).describe('Step-by-step preparation instructions.'),
-    sourceURL: z.string().url().describe('A plausible but fake URL to an original recipe source.'),
+    sourceURL: z.string().describe('A plausible but fake URL to an original recipe source.'),
 });
 
 export type Recipe = z.infer<typeof RecipeSchema>;
