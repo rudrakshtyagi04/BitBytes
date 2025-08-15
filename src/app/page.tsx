@@ -14,13 +14,13 @@ import { useLocalStorage } from '@/hooks/use-local-storage';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Sparkles, Soup, AlertTriangle } from 'lucide-react';
 
-export default function RecipeAcePage() {
+export default function ByteBitesPage() {
   const [ingredients, setIngredients] = useState('');
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [savedRecipes, setSavedRecipes] = useLocalStorage<Recipe[]>('recipeace-saved', []);
+  const [savedRecipes, setSavedRecipes] = useLocalStorage<Recipe[]>('bytebites-saved', []);
 
   const handleSuggestRecipes = async () => {
     if (!ingredients.trim()) {
@@ -125,7 +125,7 @@ export default function RecipeAcePage() {
           {!isLoading && !error && recipes.length === 0 && (
              <div className="text-center py-16 px-4 border-2 border-dashed rounded-lg max-w-2xl mx-auto">
                 <Soup className="mx-auto h-12 w-12 text-muted-foreground" />
-                <h3 className="mt-4 text-lg font-medium text-foreground">Welcome to RecipeAce!</h3>
+                <h3 className="mt-4 text-lg font-medium text-foreground">Welcome to ByteBites!</h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                     Your culinary adventure starts here. Enter some ingredients above to get started.
                 </p>

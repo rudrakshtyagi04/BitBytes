@@ -46,7 +46,7 @@ const suggestRecipesPrompt = ai.definePrompt({
   name: 'suggestRecipesPrompt',
   input: {schema: SuggestRecipesInputSchema},
   output: {schema: SuggestRecipesOutputSchema},
-  prompt: `You are a recipe suggestion AI called RecipeAce.
+  prompt: `You are a recipe suggestion AI called ByteBites.
 
 You will be provided with a list of ingredients that a user has available, and you will suggest 3-5 recipes that the user can make with those ingredients.
 For each recipe, provide a name, a short and enticing description (2-3 sentences), a list of ingredients with quantities, step-by-step instructions, a plausible but fake source URL from a popular recipe website like allrecipes.com or foodnetwork.com, and a prompt for an image generation model.

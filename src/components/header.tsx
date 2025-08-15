@@ -28,7 +28,7 @@ export function AppHeader({ savedRecipes, onSelectRecipe, onRemoveRecipe }: AppH
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <ChefHat className="h-8 w-8 text-primary" />
-          <h1 className="text-2xl font-headline font-bold text-primary">RecipeAce</h1>
+          <h1 className="text-2xl font-headline font-bold text-primary">ByteBites</h1>
         </div>
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
