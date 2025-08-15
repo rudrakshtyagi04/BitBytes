@@ -49,7 +49,7 @@ export function AppHeader({ savedRecipes, onSelectRecipe, onRemoveRecipe }: AppH
                     {savedRecipes.map((recipe, index) => (
                       <li key={index} className="flex items-start gap-4 p-3 rounded-lg border hover:bg-accent/50 transition-colors">
                         <div className="relative w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                           <Image src={`https://placehold.co/100x100.png`} alt={recipe.name} layout="fill" objectFit="cover" data-ai-hint="recipe food" />
+                           <Image src={recipe.imageUrl || `https://placehold.co/100x100.png`} alt={recipe.name} layout="fill" objectFit="cover" data-ai-hint="recipe food" />
                         </div>
                         <div className="flex-grow">
                           <button onClick={() => handleSelectRecipe(recipe)} className="text-left">

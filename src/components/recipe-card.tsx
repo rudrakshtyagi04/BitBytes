@@ -17,7 +17,7 @@ export function RecipeCard({ recipe, onSelect }: RecipeCardProps) {
     <Card className="flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
         <div className="relative aspect-video w-full -mt-6 -mx-6 mb-4">
-             <Image src={`https://placehold.co/600x400.png`} alt={recipe.name} layout="fill" objectFit="cover" data-ai-hint="recipe food" />
+             <Image src={recipe.imageUrl || `https://placehold.co/600x400.png`} alt={recipe.name} layout="fill" objectFit="cover" data-ai-hint="recipe food" />
         </div>
         <CardTitle className="font-headline text-2xl text-primary">{recipe.name}</CardTitle>
         <CardDescription className="font-body text-base">{recipe.description}</CardDescription>

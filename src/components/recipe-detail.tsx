@@ -24,7 +24,7 @@ export function RecipeDetail({ recipe, onOpenChange, isSaved, onToggleSave }: Re
       <DialogContent className="max-w-2xl w-full max-h-[90vh] flex flex-col p-0">
         <ScrollArea className="flex-grow">
         <div className="relative h-64 w-full">
-          <Image src={`https://placehold.co/600x400.png`} alt={recipe.name} layout="fill" objectFit="cover" className="rounded-t-lg" data-ai-hint="recipe dinner" />
+          <Image src={recipe.imageUrl || `https://placehold.co/600x400.png`} alt={recipe.name} layout="fill" objectFit="cover" className="rounded-t-lg" data-ai-hint="recipe dinner" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
           <div className="absolute bottom-0 left-0 p-6">
             <DialogTitle className="font-headline text-3xl text-white">{recipe.name}</DialogTitle>
